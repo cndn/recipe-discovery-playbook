@@ -49,7 +49,7 @@ const RecipeDetail = () => {
 
   // Create optimized image URL with reduced dimensions
   const optimizedImageUrl = recipe.image.includes('unsplash.com') 
-    ? `${recipe.image}&w=800&q=80` 
+    ? `${recipe.image}&w=500&q=80` 
     : recipe.image;
 
   // Get similar recipes
@@ -109,18 +109,6 @@ const RecipeDetail = () => {
               <span>Serves {recipe.servings}</span>
             </div>
           </div>
-          
-          <div className="rounded-lg overflow-hidden mb-8 max-w-2xl mx-auto">
-            <img
-              src={optimizedImageUrl}
-              alt={recipe.title}
-              className="w-full h-auto object-cover"
-              onError={(e) => {
-                // Fallback to a placeholder if image fails to load
-                e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&q=80";
-              }}
-            />
-          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -137,6 +125,19 @@ const RecipeDetail = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+              
+              {/* Recipe image moved here and made smaller */}
+              <div className="mt-6 rounded-lg overflow-hidden shadow-sm">
+                <img
+                  src={optimizedImageUrl}
+                  alt={recipe.title}
+                  className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    // Fallback to a placeholder if image fails to load
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=500&q=80";
+                  }}
+                />
               </div>
             </div>
           </div>
