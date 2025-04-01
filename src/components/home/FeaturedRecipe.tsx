@@ -36,6 +36,11 @@ const FeaturedRecipe = ({
     }
   };
 
+  // Create a smaller image URL by adding size parameters
+  const optimizedImageUrl = image.includes('unsplash.com') 
+    ? `${image}&w=800&q=80` 
+    : image;
+
   return (
     <div className="relative overflow-hidden rounded-xl bg-card shadow-lg">
       <div className="grid md:grid-cols-2">
@@ -60,9 +65,13 @@ const FeaturedRecipe = ({
         </div>
         <div className="order-1 md:order-2 aspect-video md:aspect-auto md:h-full w-full overflow-hidden">
           <img
-            src={image}
+            src={optimizedImageUrl}
             alt={title}
             className="h-full w-full object-cover"
+            onError={(e) => {
+              // Fallback to a placeholder if image fails to load
+              e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&q=80";
+            }}
           />
         </div>
       </div>

@@ -27,13 +27,22 @@ const RecipeCard = ({ id, title, image, prepTime, cookTime, servings, difficulty
     }
   };
 
+  // Create a smaller image URL by adding size parameters
+  const optimizedImageUrl = image.includes('unsplash.com') 
+    ? `${image}&w=400&q=75` 
+    : image;
+
   return (
     <Link to={`/recipe/${id}`} className="recipe-card group">
-      <div className="aspect-video w-full overflow-hidden">
+      <div className="aspect-video w-full overflow-hidden rounded-t-lg">
         <img
-          src={image}
+          src={optimizedImageUrl}
           alt={title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          onError={(e) => {
+            // Fallback to a placeholder if image fails to load
+            e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=400&q=75";
+          }}
         />
       </div>
       <div className="p-4">

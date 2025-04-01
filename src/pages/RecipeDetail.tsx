@@ -47,6 +47,11 @@ const RecipeDetail = () => {
     }
   };
 
+  // Create optimized image URL with reduced dimensions
+  const optimizedImageUrl = recipe.image.includes('unsplash.com') 
+    ? `${recipe.image}&w=800&q=80` 
+    : recipe.image;
+
   // Get similar recipes
   const similarRecipes = recipes
     .filter(r => r.id !== recipe.id && r.tags.some(tag => recipe.tags.includes(tag)))
@@ -105,11 +110,15 @@ const RecipeDetail = () => {
             </div>
           </div>
           
-          <div className="rounded-lg overflow-hidden mb-8">
+          <div className="rounded-lg overflow-hidden mb-8 max-w-2xl mx-auto">
             <img
-              src={recipe.image}
+              src={optimizedImageUrl}
               alt={recipe.title}
               className="w-full h-auto object-cover"
+              onError={(e) => {
+                // Fallback to a placeholder if image fails to load
+                e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&q=80";
+              }}
             />
           </div>
         </div>
