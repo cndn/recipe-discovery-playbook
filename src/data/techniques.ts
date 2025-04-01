@@ -142,7 +142,7 @@ export const techniques: Technique[] = [
     id: '4',
     title: 'Making Roux',
     description: 'Learn to make the flour and fat mixture that is the foundation of many sauces and soups.',
-    image: 'https://images.unsplash.com/photo-1591089627083-d9d049d833f9?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=800&q=80',
     difficulty: 'intermediate',
     content: 'A roux is a mixture of equal parts flour and fat cooked together, used to thicken sauces, soups, and gravies. The longer you cook a roux, the darker it becomes and the more flavor it develops, but the less thickening power it has.',
     steps: [
