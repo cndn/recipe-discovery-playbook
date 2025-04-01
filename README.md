@@ -2,7 +2,7 @@
 
 This is a vibe coded website for demo purpose. 
 
-Auto-generated [Demo Video](https://cbijwoqiommkecabbehp.supabase.co/storage/v1/object/public/videos/dnn/29c0f115-1197-4ef5-820a-1b8ea46d12f4/video_20250401114145_6202e030.mp4) with [VaporVibe](vapor.influme.ai)
+Auto-generated [Demo Video](https://cbijwoqiommkecabbehp.supabase.co/storage/v1/object/public/videos/373515162/170b885d-b58b-433f-8d53-74227837505c/video_20250401233556_292fe2b8.mp4) with [VaporVibe](vapor.influme.ai)
 
 
 
