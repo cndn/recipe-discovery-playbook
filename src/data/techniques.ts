@@ -21,7 +21,7 @@ export const techniques: Technique[] = [
     id: '1',
     title: 'Knife Skills: Basic Cuts',
     description: 'Learn the fundamental cutting techniques that form the foundation of cooking.',
-    image: 'https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop',
     difficulty: 'beginner',
     content: 'Proper knife skills are essential for any cook. They not only make your cooking more efficient but also safer. This technique guide covers the basic cuts used in cooking, from dicing to julienne.',
     steps: [
@@ -55,7 +55,7 @@ export const techniques: Technique[] = [
     id: '2',
     title: 'Sautéing Vegetables',
     description: 'Master the quick-cooking technique of sautéing for flavorful, crisp-tender vegetables.',
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop',
     difficulty: 'beginner',
     content: 'Sautéing is a versatile cooking method that uses high heat and a small amount of fat to quickly cook food while maintaining texture and developing flavor. It\'s perfect for vegetables, as it preserves nutrients and creates delicious caramelization.',
     steps: [
@@ -96,7 +96,7 @@ export const techniques: Technique[] = [
     id: '3',
     title: 'Pan-Searing Meat',
     description: 'Achieve a delicious golden-brown crust and tender, juicy meat with proper pan-searing.',
-    image: 'https://images.unsplash.com/photo-1588778272105-1ff4b1800095?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1588778272105-1ff4b1800095?auto=format&fit=crop',
     difficulty: 'intermediate',
     content: 'Pan-searing is a high-heat cooking method that creates a flavorful crust on the outside of meat while keeping the inside juicy. It\'s an essential technique for steaks, chops, and fillets.',
     steps: [
@@ -142,7 +142,7 @@ export const techniques: Technique[] = [
     id: '4',
     title: 'Making Roux',
     description: 'Learn to make the flour and fat mixture that is the foundation of many sauces and soups.',
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop',
     difficulty: 'intermediate',
     content: 'A roux is a mixture of equal parts flour and fat cooked together, used to thicken sauces, soups, and gravies. The longer you cook a roux, the darker it becomes and the more flavor it develops, but the less thickening power it has.',
     steps: [
