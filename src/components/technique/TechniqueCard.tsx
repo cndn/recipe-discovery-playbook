@@ -33,6 +33,10 @@ const TechniqueCard = ({ id, title, image, difficulty, description, hasVideo = f
           src={image}
           alt={title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          onError={(e) => {
+            // Fallback to a placeholder if image fails to load
+            e.currentTarget.src = "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&q=80";
+          }}
         />
         {hasVideo && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-90 transition-opacity group-hover:opacity-100">
