@@ -83,7 +83,7 @@ export const recipes: Recipe[] = [
     tips: [
       'Don\'t overmix the batter – this develops gluten and makes pancakes tough.',
       'Let the batter rest for 5 minutes before cooking for even fluffier pancakes.',
-      'Make sure your pan is at the right temperature – too hot and pancakes will burn, too cool and they'll be dense.'
+      'Make sure your pan is at the right temperature – too hot and pancakes will burn, too cool and they\'ll be dense.'
     ],
     tags: ['Breakfast', 'Brunch', 'Sweet']
   },
@@ -119,15 +119,15 @@ export const recipes: Recipe[] = [
     ],
     tips: [
       'Bringing the chicken to room temperature before roasting helps it cook more evenly.',
-      'Trussing the chicken (tying the legs together) helps it cook more evenly, but isn't strictly necessary.',
-      'For extra crispy skin, pat the chicken very dry before roasting and don't cover it while resting.'
+      'Trussing the chicken (tying the legs together) helps it cook more evenly, but isn\'t strictly necessary.',
+      'For extra crispy skin, pat the chicken very dry before roasting and don\'t cover it while resting.'
     ],
     tags: ['Dinner', 'Main Course', 'Poultry']
   },
   {
     id: '4',
     title: 'Fresh Guacamole',
-    description: 'A simple, fresh guacamole that's perfect for dipping or topping.',
+    description: 'A simple, fresh guacamole that\'s perfect for dipping or topping.',
     image: 'https://images.unsplash.com/photo-1600335895229-6e75511892c8?auto=format&fit=crop&w=800&q=80',
     difficulty: 'beginner',
     prepTime: 15,
@@ -196,7 +196,7 @@ export const recipes: Recipe[] = [
     ],
     tips: [
       'Have all your ingredients prepped and ready before you start cooking, as stir-frying goes quickly.',
-      'Don't overcrowd the pan – cook in batches if necessary to ensure vegetables get a good sear.',
+      'Don\'t overcrowd the pan – cook in batches if necessary to ensure vegetables get a good sear.',
       'Customize with your favorite vegetables or add protein like tofu, chicken, or shrimp.'
     ],
     tags: ['Asian', 'Vegetarian', 'Quick', 'Healthy'],
@@ -235,7 +235,7 @@ export const recipes: Recipe[] = [
       'Allow cookies to cool on baking sheets for 2 minutes before removing to wire racks to cool completely.'
     ],
     tips: [
-      'For chewy cookies, don't overbake – they should still be slightly soft in the center when you take them out.',
+      'For chewy cookies, don\'t overbake – they should still be slightly soft in the center when you take them out.',
       'Chilling the dough for 24 hours deepens the flavor and improves texture.',
       'For perfectly round cookies, roll the dough into balls before baking.'
     ],
