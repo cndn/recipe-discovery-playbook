@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
@@ -86,7 +85,7 @@ const TechniqueDetail = () => {
             <img
               src={technique.image}
               alt={technique.title}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto max-h-[400px] object-cover mx-auto"
             />
           </div>
         </div>
@@ -114,7 +113,7 @@ const TechniqueDetail = () => {
                     <img 
                       src={step.image} 
                       alt={step.title}
-                      className="w-full h-auto object-cover" 
+                      className="w-full h-auto max-h-[300px] object-cover mx-auto" 
                     />
                   )}
                 </div>
@@ -199,3 +198,4 @@ const TechniqueDetail = () => {
 };
 
 export default TechniqueDetail;
+
