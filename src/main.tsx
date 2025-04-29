@@ -8,12 +8,20 @@ import { Capacitor } from '@capacitor/core'
  * Wait for the device to be ready before mounting the app when running natively
  */
 const mountApp = () => {
-  createRoot(document.getElementById("root")!).render(<App />);
+  const rootElement = document.getElementById("root");
+  if (rootElement) {
+    createRoot(rootElement).render(<App />);
+  } else {
+    console.error("Root element not found");
+  }
 }
 
+// Add a small delay for the router context to initialize properly in native mode
 if (Capacitor.isNativePlatform()) {
-  // Wait for device ready event when running as native app
-  document.addEventListener('deviceready', mountApp, false);
+  document.addEventListener('deviceready', () => {
+    // A small timeout to ensure DOM is fully ready in native environment
+    setTimeout(mountApp, 100);
+  }, false);
 } else {
   // Mount immediately when running as web app
   mountApp();
