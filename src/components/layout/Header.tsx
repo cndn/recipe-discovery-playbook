@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Input } from '@/components/ui/input';
+import { isNative } from '@/utils/platform';
 
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -17,8 +18,11 @@ const Header = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  // Add additional padding when running as a native iOS app
+  const nativePadding = isNative() ? 'pt-2' : '';
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={`sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ${nativePadding}`}>
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 md:gap-4">
           <Sheet>
