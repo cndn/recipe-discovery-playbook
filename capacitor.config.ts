@@ -10,7 +10,14 @@ const config: CapacitorConfig = {
     cleartext: true
   },
   ios: {
-    contentInset: 'always'
+    contentInset: 'always',
+    limitsNavigationsToAppBoundDomains: true,
+    scrollEnabled: true
+  },
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false
+    }
   }
 };
 

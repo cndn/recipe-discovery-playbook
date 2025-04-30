@@ -16,11 +16,11 @@ const mountApp = () => {
   }
 }
 
-// Add a small delay for the router context to initialize properly in native mode
+// Add a longer delay for the router context to initialize properly in native mode
 if (Capacitor.isNativePlatform()) {
   document.addEventListener('deviceready', () => {
-    // A small timeout to ensure DOM is fully ready in native environment
-    setTimeout(mountApp, 100);
+    // A longer timeout to ensure DOM and React Router are fully ready in native environment
+    setTimeout(mountApp, 500);
   }, false);
 } else {
   // Mount immediately when running as web app

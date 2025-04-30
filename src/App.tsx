@@ -11,27 +11,33 @@ import RecipeDetail from "./pages/RecipeDetail";
 import Techniques from "./pages/Techniques";
 import TechniqueDetail from "./pages/TechniqueDetail";
 import Tips from "./pages/Tips";
+import { Capacitor } from "@capacitor/core";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="/recipe/:id" element={<RecipeDetail />} />
-          <Route path="/techniques" element={<Techniques />} />
-          <Route path="/technique/:id" element={<TechniqueDetail />} />
-          <Route path="/tips" element={<Tips />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Use hash router for iOS to avoid routing issues in native environments
+  const routerBasename = Capacitor.isNativePlatform() ? '' : undefined;
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={routerBasename}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/recipes" element={<Recipes />} />
+            <Route path="/recipe/:id" element={<RecipeDetail />} />
+            <Route path="/techniques" element={<Techniques />} />
+            <Route path="/technique/:id" element={<TechniqueDetail />} />
+            <Route path="/tips" element={<Tips />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
