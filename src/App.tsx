@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Recipes from "./pages/Recipes";
@@ -11,20 +11,16 @@ import RecipeDetail from "./pages/RecipeDetail";
 import Techniques from "./pages/Techniques";
 import TechniqueDetail from "./pages/TechniqueDetail";
 import Tips from "./pages/Tips";
-import { Capacitor } from "@capacitor/core";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Use hash router for iOS to avoid routing issues in native environments
-  const routerBasename = Capacitor.isNativePlatform() ? '' : undefined;
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={routerBasename}>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/recipes" element={<Recipes />} />
@@ -34,7 +30,7 @@ const App = () => {
             <Route path="/tips" element={<Tips />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );

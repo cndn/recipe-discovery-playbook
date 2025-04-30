@@ -6,8 +6,7 @@ const config: CapacitorConfig = {
   appName: 'recipe-discovery-playbook',
   webDir: 'dist',
   server: {
-    url: 'https://c3932129-b59a-438e-93ed-848a4e0a064a.lovableproject.com?forceHideBadge=true',
-    cleartext: true
+    androidScheme: 'https'
   },
   ios: {
     contentInset: 'always',
